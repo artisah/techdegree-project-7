@@ -1,0 +1,17 @@
+// **************************************
+// styles.scss
+// Main Sass file used to import partials
+// **************************************
+
+
+// order of import is important.
+@import 'variables';
+@import 'base';
+@import 'functions';
+@import 'mixin';
+@import 'layout';
+@import 'header';
+@import 'navigation';
+@import 'main';
+
+

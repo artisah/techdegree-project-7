@@ -1,0 +1,50 @@
+.header__container {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+}
+
+.logo-list {
+     margin-right: auto;
+}
+
+.bell-list {
+    margin-right: 25px;
+}
+
+.line-seperator {
+    padding-right: 20px;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    height: 40px;
+}
+
+.header-right__bell-icon {
+    width: 20px;
+  }
+
+  .user__image {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.bell-list a[data-bubble] {
+    position: relative;
+}
+
+.bell-list a[data-bubble]::after {
+    // content: attr(data-bubble);
+    content: "";
+    position: absolute;
+    top:  em(-15px);
+    right: em(-3px);
+    width: em(10px);
+    height: em(10px);
+    line-height: em(10px);  // to center text
+    text-align: center;
+    border-radius: 50%;
+    color: $color-white;
+    font-weight: 400;
+    background-color: $color-green;
+}
