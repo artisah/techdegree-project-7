@@ -7,7 +7,7 @@
 }
    
 
-html {
+* {
     box-sizing: border-box;
 }
 
@@ -15,4 +15,22 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: $color-dark-grey;
+    font-size: em(23px);
+    letter-spacing: em(0.3px);
+}
+
+h4 {
+    color: $color-dark-grey;
+    font-size: em(15px);
+    font-weight: 400;
+    padding-bottom: em(15px);
+    text-transform: uppercase;
 }

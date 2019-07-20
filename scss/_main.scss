@@ -1,0 +1,167 @@
+// dashboard search
+
+.main {
+    padding: em(18px);
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // &__search-form {
+
+    // }
+
+    &__search-icon {
+       height: 15px;
+       width: 15px;
+       fill: $color-primary; 
+    }
+}
+
+// *********************
+// Chart section.
+// **********************
+
+.traffic {
+    padding: em(18px);
+
+    &__header {
+        padding: 0 10px 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+    &__list {
+        // flex: 0 1 55%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+} 
+
+
+// To make traffic  charts responsive
+.widget-container-full,
+.widget-container-half {
+  position: relative;
+    margin: auto;
+    // height: 80vh;
+    width: 95vw;
+}
+
+
+
+// Social
+.social {
+    padding: em(18px);
+
+    // &-wrapper {
+    //     display: flex;
+    //     flex-direction: column;
+    //     // justify-content: center;
+    // }
+    
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-dark-grey;
+        background-color: $color-grey-medium;
+        padding: em(20px);
+        margin: em(10px);  
+    }
+
+    &__image {
+        background-color: $color-primary;
+        border-radius: 50%;
+        text-align: center;
+        width: em(80px);
+        height: em(80px);
+        padding: em(25px);
+    } 
+
+    &__icon {
+        width: em(30px);
+        height: em(30px);
+
+    }
+
+    & path {
+        fill: $color-white;
+      }
+
+      &__text {
+        margin-left: 20px;
+
+        & h3 {
+            color: $color-primary;
+            font-weight: 900;
+        }
+    
+        & p {
+            color: $color-dark-grey;
+            font-size: 3rem;
+            font-weight: 300;     
+        }
+      }
+}
+
+// media query
+@include mq(medium) {
+    // .header-secondary,
+    .traffic 
+    // .social 
+    {
+        grid-column: 1 / -1;
+    }
+
+    .daily
+    // .members,
+    // .message 
+    {
+        grid-column: 1 / span 1;
+        border: 1px solid $color-grey-light;
+        padding: em(20px);
+        border-left-style: none;
+    }
+
+     .mobile
+    // .activity,
+    // .settings 
+     {
+          grid-column : 2 / span 1;
+          border: 1px solid $color-grey-light;
+          padding: em(20px);
+          border-right-style: none;
+         
+     }
+
+    .widget-container-half {
+        width: 45vw;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+
+    }
+
+   // Social
+
+   .page__social {
+       grid-column: 1/-1;
+
+   }
+
+    .social-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

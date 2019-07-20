@@ -1,7 +1,10 @@
+
+// Top header
 .header__container {
     display: flex;
     align-items: center;
-    padding: 18px;
+    padding: em(18px);
+    color: $color-white;
 }
 
 .logo-list {
@@ -9,38 +12,42 @@
 }
 
 .bell-list {
-    margin-right: 25px;
+    margin-right: em(25px);
 }
 
 .line-seperator {
-    padding-right: 20px;
+    padding-right: em(20px);
     border-left: 2px solid rgba(0, 0, 0, 0.1);
-    height: 40px;
+    height: em(40px);
+}
+
+
+   
+  .user__image {
+    width: em(40px);
+    height: em(40px);
+    margin-right: em(15px);
+    border-radius: 50%;
 }
 
 .header-right__bell-icon {
     width: 20px;
   }
 
-  .user__image {
-    width: 40px;
-    height: 40px;
-    margin-right: 1rem;
-    border-radius: 50%;
-}
-
+// bell badge, circle
 .bell-list a[data-bubble] {
     position: relative;
 }
 
+// data-bubble is user defined attribute.
 .bell-list a[data-bubble]::after {
     // content: attr(data-bubble);
     content: "";
     position: absolute;
-    top:  em(-15px);
+    top:  em(-12px);
     right: em(-3px);
-    width: em(10px);
-    height: em(10px);
+    width: em(8px);
+    height: em(8px);
     line-height: em(10px);  // to center text
     text-align: center;
     border-radius: 50%;

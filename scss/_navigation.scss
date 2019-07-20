@@ -1,0 +1,43 @@
+.nav {
+  padding: em(18px);
+    
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__container li {
+       height: em(60px);
+      padding: em(10px);
+    }
+
+    &__link {
+       display: block;
+        padding: em(10px);
+        opacity: 0.6;
+        //  border: 2px solid transparent;
+      &:hover {
+        border-bottom: 2px solid $color-green;
+        opacity: 1;
+      }   
+    }
+
+    &__image {
+        width: em(32px);
+        height: em(32px);
+  }
+}
+
+@include mq(medium) {
+    .nav__container{
+        flex-direction: column;
+    
+        .nav__link:hover {
+             border-bottom-style: none;
+             border-left: 2px solid $color-green;
+             opacity: 1;
+           }   
+         
+    }
+}

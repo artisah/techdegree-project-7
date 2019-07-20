@@ -28,8 +28,6 @@
 
 
 // Media query
-
-// @media (min-width: 768px) {
     @include mq(medium) {
         .page {
             grid-template-columns: 12vw 1fr;
@@ -38,30 +36,13 @@
             "navigation main";
 
             &__main {
-               grid-template-columns: 1fr 1fr;
+              grid-template-columns: 1fr 1fr;
             }
-        }
-            
-        .half {
-            border: 1px solid green;
-            
-        }
-
-        
-        .social {
-            grid-column: 1 / -1;
-           
-            &__wrapper {
-                display: flex;
-                justify-content: space-evenly;
-            }
-
-            &__container {
-                border: 1px solid black;
-                padding: em(20px) em(40px);
-            }   
         }
     }
+
+      
+
 
 
 
