@@ -1,17 +1,13 @@
 // dashboard search
 
 .main {
-    padding: em(18px);
+    padding: em(20px);
 
     &__search {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-    // &__search-form {
-
-    // }
 
     &__search-icon {
        height: 15px;
@@ -25,7 +21,7 @@
 // **********************
 
 .traffic {
-    padding: em(18px);
+    padding: em(20px);
 
     &__header {
         padding: 0 10px 20px 0;
@@ -50,16 +46,15 @@
 .widget-container-full,
 .widget-container-half {
   position: relative;
-    margin: auto;
-    // height: 80vh;
-    width: 95vw;
+  margin: auto;
+  width: 95vw;
 }
 
 
 
 // Social
 .social {
-    padding: em(18px);
+    padding: em(20px);
 
     // &-wrapper {
     //     display: flex;
@@ -72,7 +67,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid $color-dark-grey;
+        border: 1px solid $color-grey-light;
         background-color: $color-grey-medium;
         padding: em(20px);
         margin: em(10px);  
@@ -98,7 +93,7 @@
       }
 
       &__text {
-        margin-left: 20px;
+        margin-left: em(20px);
 
         & h3 {
             color: $color-primary;
@@ -107,24 +102,177 @@
     
         & p {
             color: $color-dark-grey;
-            font-size: 3rem;
+            font-size: em(38px);
             font-weight: 300;     
         }
       }
 }
 
+
+// MEMBERS 
+
+.member {
+  padding: em(20px);
+  border: 1px solid $color-grey-light;
+  border-left-style: none;
+  
+  &-container {
+      display: flex;
+      border-bottom: 1px solid $color-grey-light;
+      margin-bottom: em(20px);
+      padding: 0 40px;
+  }
+
+  &-container:last-child {
+    border-bottom-style: none;
+  }
+
+  &__date {
+      margin-left: auto;
+  }
+
+  &__image {
+      padding: 0 em(10px) 20px 0;
+  }
+
+  &__image img {
+      width: 40px;
+      width: 40px;
+      border-radius: 50%;
+}
+
+}
+
+// ACTIVITY
+
+.activity {
+    padding: em(20px);
+    border: 1px solid $color-grey-light;
+    border-left-style: none;
+  
+  
+    &-container {
+        display: flex;
+        border-bottom: 1px solid $color-grey-light;
+        margin-bottom: em(20px);
+        padding: 0 40px;
+    }
+
+    &-container:last-child {
+        border-bottom-style: none;
+      }
+  
+    &__detail {
+        margin-left: auto;
+        font-size: em(30px);
+    }
+  
+    &__image {
+        padding: 0 em(10px) 20px 0;
+    }
+  
+    &__image img {
+        width: 40px;
+        width: 40px;
+        border-radius: 50%;
+  }
+  
+  }
+
+//   MESSAGE
+.message {
+    padding: em(20px);
+    border-right: 1px solid $color-dark-grey;
+    border-bottom:  1px solid $color-dark-grey;  
+    
+    &__form > * {
+        padding-bottom: 20px;
+
+        & input {
+         height: 50px;
+        }
+
+        & input,
+        & textarea {
+            background-color: $color-grey-medium;
+            width: 100%;
+            font-size: em(18px);
+            opacity: 0.6;
+            padding: em(10px);
+        }
+
+        & button {
+            background-color: $color-primary;
+            width: 100%;
+            height: 50px;
+            color: $color-white;
+            border-radius: 8px;
+            font-size: 15px; 
+            text-transform: uppercase; 
+        }
+    }
+}
+
+// SETTINGS
+.settings {
+     padding: em(20px);
+     color: $color-dark-grey;
+     border-right: 1px solid $color-dark-grey;
+     border-bottom: 1px solid $color-dark-grey;
+
+     &__form > * {
+        padding: 20px 10px;
+        font-size: 18px;
+
+        & label {
+            display: inline-block;
+            width: 50%;
+        }
+     }
+
+     &__button  button {
+        background-color: $color-primary;
+        width: 40%;
+        height: 50px;
+        color: $color-white;
+        border-radius: 8px;
+        font-size: 15px; 
+        text-transform: uppercase; 
+        margin-right: 10px;
+        margin-top: em(38px);
+
+     }
+
+     &__option {
+        height: 50px;
+        background-color: $color-grey-medium;
+        width: 90%;
+        font-size: em(15px);
+        opacity: 0.2;
+        padding: em(10px);
+
+     }
+
+     .settings__inactive
+     {
+       background-color: $color-button-grey;
+   }  
+}
+
+
+
 // media query
 @include mq(medium) {
     // .header-secondary,
-    .traffic 
-    // .social 
+    .traffic ,
+    .social 
     {
-        grid-column: 1 / -1;
+       grid-column: 1 / -1;
     }
 
-    .daily
-    // .members,
-    // .message 
+    .daily,
+    .members,
+    .message 
     {
         grid-column: 1 / span 1;
         border: 1px solid $color-grey-light;
@@ -132,9 +280,9 @@
         border-left-style: none;
     }
 
-     .mobile
-    // .activity,
-    // .settings 
+     .mobile,
+     .activity,
+     .settings 
      {
           grid-column : 2 / span 1;
           border: 1px solid $color-grey-light;
@@ -149,19 +297,21 @@
 
     .widget-container-full {
         width: 90vw;
-
     }
 
    // Social
-
-   .page__social {
-       grid-column: 1/-1;
-
-   }
-
     .social-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    // Members
+    .member-container,
+    .activity-container {
+        padding: 0;
+    }
+
 }
+
+
