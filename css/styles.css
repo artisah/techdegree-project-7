@@ -234,6 +234,25 @@ h4 {
           align-items: center;
 }
 
+.traffic__list a {
+  display: bold;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
+.traffic__list a:hover {
+  background-color: #81C98F;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.active-list {
+  background-color: #81C98F;
+  color: #fff;
+  border-radius: 20px;
+}
+
 .widget-container-full,
 .widget-container-half {
   position: relative;

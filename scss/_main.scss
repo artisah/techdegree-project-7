@@ -32,14 +32,31 @@
     }
 
     &__list {
-        // flex: 0 1 55%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        & a {
+            display: bold;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 8px 12px; 
+            
+            &:hover {
+                background-color: $color-green;
+                color: $color-white;
+                border-radius: 20px;
+             }
+        }
     }
 
 } 
+
+.active-list {
+    background-color: $color-green;
+    color: $color-white;
+    border-radius: 20px; 
+}
 
 
 // To make traffic  charts responsive
