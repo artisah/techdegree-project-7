@@ -2,11 +2,10 @@
 const trafficChartView = document.getElementById('traffic-chart-View');
 const trafficCanvas = document.getElementById('traffic-chart'); 
 const activeTrafficList = document.querySelector('.active-list');
+const alert = document.getElementById("alert");
 
-console.log(activeTrafficList);
 
-let displayChartValue = '';
-
+// TRAFFIC CHART
 let trafficCharLabels = {
     'hourly': ['02','04','06','08','10','12','14','16','18','20','22','00'],
     'daily' : ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
@@ -23,6 +22,8 @@ let trafficData = {
 
 // default display chart on page load
 displayChart(trafficCharLabels.weekly, trafficData.weekly);
+
+let displayChartValue = '';
 
 trafficChartView.addEventListener('click', function(e) {
     displayChartValue = e.target.innerHTML.toLowerCase();
@@ -41,7 +42,7 @@ trafficChartView.addEventListener('click', function(e) {
 
 }) ;
 
-
+// LINE CHART
 function displayChart(labelvalue, dataValue) {
     let lineChart = new Chart(trafficCanvas, {
         type: 'line',
@@ -80,7 +81,7 @@ function displayChart(labelvalue, dataValue) {
 }
 
 
-// Daily traffic bar chart.
+// BAR CHART.
 
 const dailyCanvas = document.getElementById('daily-chart'); 
 let barChart = new Chart(dailyCanvas, {
@@ -112,7 +113,7 @@ let barChart = new Chart(dailyCanvas, {
     }
 }); 
 
-// Doughnut chart
+//DOUGHNUT CHART
 const mobileCanvas = document.getElementById('mobile-chart'); 
 let doughnutChart = new Chart(mobileCanvas, {
     type: 'doughnut',
@@ -144,3 +145,25 @@ let doughnutChart = new Chart(mobileCanvas, {
         }
     }
 }); 
+
+
+// ALERT DIALOG
+
+// create the html for the banner
+alert.innerHTML =
+`
+<div class="alert-banner">
+<p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
+to complete</p>
+<p class="alert-banner-close">x</p>
+</div>
+`;
+
+alert.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains("alert-banner-close")) {
+    alert.style.display = "none"
+    }
+});
+ 
+                       

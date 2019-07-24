@@ -1,19 +1,69 @@
 // dashboard search
 
-.main {
-    padding: em(20px);
+.search {
+    padding: 0 0 20px 20px;
+    display: flex;
 
-    &__search {
+    
+    &__header {
+        flex-basis: 20%;
+        padding-top: 20px;
+    }
+
+    &-container {
+        background: $color-grey-medium;
+        border: 1px solid $color-grey-light;
+        flex-basis: 80%;
+        height: 60px;
+    }
+
+    &-form {
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    &__input {
+        width: 50%;
+        height: 40px;
+        opacity: 0.6;
+        background-color: $color-white;
+        font-size: em(16px);
+        text-align:left
+        ;
+    }
+
+    &__button {
+        background-color: $color-white;
+        border: none;
+    }
+
+    &__icon {
+       height: 15px;
+       width: 15px;
+       fill: $color-primary; 
+       margin-left: -30px;
+       
+    }
+}
+
+// ALERT DIALOG
+
+.alert {
+    padding: em(12px);
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 5px;
+    margin: 0 50px;
+
+    &-banner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-    &__search-icon {
-       height: 15px;
-       width: 15px;
-       fill: $color-primary; 
-    }
+    
 }
 
 // *********************
@@ -49,7 +99,6 @@
              }
         }
     }
-
 } 
 
 .active-list {
@@ -280,7 +329,7 @@
 
 // media query
 @include mq(medium) {
-    // .header-secondary,
+    .search,
     .traffic ,
     .social 
     {
