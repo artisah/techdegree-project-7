@@ -239,7 +239,7 @@ h4 {
   margin-left: -30px;
 }
 
-.alert {
+.alert-message {
   padding: 0.75em;
   background-color: #7578BF;
   color: #fff;
@@ -247,7 +247,7 @@ h4 {
   margin: 0 50px;
 }
 
-.alert-banner {
+.alert-message__banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,6 +465,7 @@ h4 {
   border-radius: 8px;
   font-size: 15px;
   text-transform: uppercase;
+  outline: none;
 }
 
 .settings {
@@ -482,6 +483,16 @@ h4 {
 .settings__form > * label {
   display: inline-block;
   width: 50%;
+}
+
+.settings__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  justify-items: center;
 }
 
 .settings__button button {

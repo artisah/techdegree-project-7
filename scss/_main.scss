@@ -51,14 +51,14 @@
 
 // ALERT DIALOG
 
-.alert {
+.alert-message {
     padding: em(12px);
     background-color: $color-primary;
     color: $color-white;
     border-radius: 5px;
     margin: 0 50px;
 
-    &-banner {
+    &__banner {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -275,6 +275,7 @@
             border-radius: 8px;
             font-size: 15px; 
             text-transform: uppercase; 
+            outline: none;
         }
     }
 }
@@ -294,6 +295,13 @@
             display: inline-block;
             width: 50%;
         }
+     }
+
+     &__toggle {
+         display: flex;
+         justify-content: flex-start;
+         justify-items: center;
+
      }
 
      &__button  button {

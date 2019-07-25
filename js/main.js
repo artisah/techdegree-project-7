@@ -2,8 +2,10 @@
 const trafficChartView = document.getElementById('traffic-chart-View');
 const trafficCanvas = document.getElementById('traffic-chart'); 
 const activeTrafficList = document.querySelector('.active-list');
-const alert = document.getElementById("alert");
-
+const alertMessage = document.getElementById("alert-message");
+const msgSendBtn = document.getElementById('message__send');
+const msgUserName = document.getElementById('message__user-name');
+const msgUserMessage = document.getElementById('message__user');
 
 // TRAFFIC CHART
 let trafficCharLabels = {
@@ -148,22 +150,35 @@ let doughnutChart = new Chart(mobileCanvas, {
 
 
 // ALERT DIALOG
-
-// create the html for the banner
-alert.innerHTML =
+alertMessage.innerHTML =
 `
-<div class="alert-banner">
+<div class="alert-message__banner">
 <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
 to complete</p>
 <p class="alert-banner-close">x</p>
 </div>
 `;
 
-alert.addEventListener('click', e => {
+alertMessage.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none"
+        alertMessage.style.display = "none"
     }
+});
+
+// MESSAGE
+msgSendBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    if (msgUserName.value === "" && msgUserMessage.value === "") {
+        alert("Please fill user and message before sending.");
+    } else if (msgUserName.value === "") {
+        alert("Please fill out user before sending.");
+    } else if (msgUserMessage.value === "") {
+       alert("Please fill message before sending.")
+    } else {
+        alert(`Message successfully sent to: ${msgUserName.value}`);
+    }    
 });
  
                        
